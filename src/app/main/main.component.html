@@ -1,0 +1,31 @@
+<div style="margin-left: 20%; margin-top: 20px;">
+    <ul class="image-list-small" *ngFor="let item of dataList[0]">
+        <li>
+          <img src="{{item.strMealThumb}}">
+          <div class="details">
+            <h3>
+            {{item.strMeal}}</h3>
+          </div>
+        </li>
+    </ul>
+</div>
+     <!-- <section *ngIf="random !== null">
+        <div class="wrapper" *ngFor="let random of dataList[0]">
+          <div class="recipe-box">
+            <img class="thumb" src="{{random.strMealThumb}}">
+            <div class="details-box">
+              <h2
+                routerLink="/category/{{random.strCategory.toLowerCase()}}/{{removeWhitespace(random.strMeal).toLowerCase()}}/{{random.idMeal}}">
+                {{random.strMeal}}</h2>
+              <section class="tags" *ngIf="random !== undefined">
+                <p class="category"
+                  routerLink="/category/{{random.strCategory.toLowerCase()}}/{{removeWhitespace(random.strMeal).toLowerCase()}}/{{random.idMeal}}">
+                  Read instructions
+                </p>
+              </section>
+              <h3>Instructions</h3>
+                <p class="instructions">{{random.strInstructions}}</p>
+            </div>
+          </div>
+        </div>
+      </section> -->

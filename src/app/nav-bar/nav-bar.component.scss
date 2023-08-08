@@ -1,0 +1,84 @@
+ul {
+    list-style: none;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  nav {
+    padding: 10px;
+    display: flex;
+    height: 100vh;
+    position: fixed;
+    width: 160px;
+    background: rgb(250, 186, 29);
+    background: linear-gradient(180deg, rgb(252, 183, 8) 0%, rgba(255, 197, 57, 1) 44%, rgb(250, 171, 2) 100%);
+    transition: .4s ease;
+  }
+  
+  nav:hover {
+    width: 130px;
+    -moz-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    transition: .3s ease-in;
+  }
+  
+  li {
+    margin-top: 16px;
+    margin-left: 5px;
+    outline: none;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Varela Round', sans-serif;
+  }
+  
+  
+  @media only screen and (max-width : 680px) {
+  
+    ul,
+    li {
+      display: inline;
+      padding: 10px;
+      text-align: center;
+      margin: 0;
+      font-weight: 600;
+      color: rgb(250, 186, 29);
+      font-size: 12px;
+    }
+  
+    nav,
+    nav:hover {
+      height: 40px;
+      width: 100vw;
+      z-index: 1;
+      background: #fff;
+    }
+  
+    nav {
+      border-bottom: 2px solid rgb(250, 186, 29);
+    }
+  }
+  
+  @media only screen and (max-width: 330px) {
+  
+    ul,
+    li {
+      display: block;
+      text-align: left;
+    }
+  
+    nav,
+    nav:hover {
+      height: auto;
+      width: 100vw;
+      z-index: 1;
+      background: #fff;
+    }
+  }
+  

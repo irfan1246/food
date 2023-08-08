@@ -1,0 +1,67 @@
+.image-list-small {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 640px;
+    padding: 0;
+  }
+  
+  .image-list-small li {
+    display: inline-block;
+    width: 181px;
+    margin: 0 12px 30px;
+  }
+
+  h3 {
+    text-align: center;
+    color: rgb(63, 63, 63);
+    font-weight: 400;
+    font-size: 32px;
+    margin-top: 40px;
+  }
+  
+  img {
+    width: 98%;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 2px 44px -6px rgba(209, 209, 209, 0.726);
+    -moz-box-shadow: 0px 2px 44px -6px rgba(209, 209, 209, 0.726);
+    box-shadow: 0px 2px 44px -6px rgba(209, 209, 209, 0.726);
+  }
+
+
+/* Parent Container */
+.image-list-small{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+}
+
+/* Child Text Container */
+.image-list-small div{
+    position: absolute;
+    top: -5px;
+    color: black;
+    background: white;
+    margin-bottom: 5px;
+    font-family: sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.image-list-small:hover{
+    cursor: pointer;
+}
+
+.image-list-small:hover div{
+    width: 150px;
+    height: 168px;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7; 
+}

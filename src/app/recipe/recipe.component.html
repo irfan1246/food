@@ -1,0 +1,36 @@
+<section *ngIf="data !== null && data !== undefined">
+  <div class="wrapper">
+    <div class="recipe-box">
+      <img class="thumb" src="{{data.strMealThumb}}">
+      <div class="details-box">
+        <h2>{{data.strMeal}}</h2>
+        <section class="tags" *ngIf="data !== undefined">
+          <p class="category" routerLink="/category/{{data.strCategory.toLowerCase()}}">
+            {{data.strCategory}} recipes
+          </p>
+          <p class="category" routerLink="/category/{{data.strArea.toLowerCase()}}">
+            {{data.strArea}} cuisine
+          </p>
+        </section>
+      </div>
+    </div>
+    <div class="how-to">
+      <h3>Ingredients</h3>
+      <ul *ngFor="let int of ingredients, let i = index">
+        <li class="ingredient" *ngIf='int !== " " && data !== null' (click)="addToList(i)">
+          {{int}}
+          <span class="wrap-add">
+            <button class="add">+</button>
+          </span>
+        </li>
+
+      </ul>
+      <br>
+      <h3>Instructions</h3>
+      <p class="instructions">{{data.strInstructions}}</p>
+      <iframe *ngIf="data !== undefined" width="670" height="315" [src]=getVideoURL() frameborder="0"
+        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <button class="recipe-button favs-button" (click)="saveRecipe(data.idMeal)">Save</button>
+    </div>
+  </div>
+</section>
